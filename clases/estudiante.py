@@ -1,23 +1,15 @@
+from .persona import Persona
 
 
+class Estudiante(Persona):
 
-class Estudiante():
-
-    def __init__(self, carnet, carrera):
+    def __init__(self, nombre,edad,sexo,carnet, carrera):
+        super().__init__(nombre,edad,sexo)
         self.carnet = carnet
-        self.carrera = carrera
+        self.carrera = carrera 
 
-    def estudiante(self):
 
-        return (f"El carnet es {self.carnet} la carrera es {self.carrera}")
+    def __str__(self):
+
+        return f"{super().__str__()}, carnet: {self.carnet}, carrera {self.carrera}"
     
-class Curso():
-
-    def __init__(self,nombre,codigo, profesor):
-        self.nombre = nombre
-        self.codigo = codigo
-        self.profesor = profesor
-
-    def curso(self):
-
-        return (f"El nombre es {self.nombre} el codigo es {self.codigo} y el profesor es {self.profesor}") 
